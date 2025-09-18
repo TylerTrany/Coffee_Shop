@@ -1,0 +1,4 @@
+.chart.alone {
+    max-width: 500px; /* Set size of width of chart that stands by itself to 500 px */
+    margin-bottom: 24px; /* Set margin */
+}
