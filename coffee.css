@@ -1,0 +1,78 @@
+/* Background color */
+body {
+    background-color: #ccc79c; /* Gives skin-tone background for the whole site */
+}
+
+/* Coffee Header */
+/* Gives the title of the site its style */
+.site-title {
+    font-size: 32px; /* Gives large text for site title */
+    font-weight: bold; /* Bold the title */
+    color: #6f4e37;
+}
+
+/* Gives the heading a brown background and white color for words */
+.coffee-header {
+    align-items: center; /* Center items horizontally */
+    padding: 2px; /* Space inside the header */
+    background-color: #6d4f3a; /* Gives the background of the header Brown */
+    color: white; /* Set header words to white */
+    text-align: center; /* Center text */
+}
+
+/* Makes the logo and title side by side */
+.brand {
+    display: flex; /* Makes the logo and title side by side */
+    align-items: center; /* Vertically align them */
+    gap: 12px; /* Sets the space between Logo and title */
+}
+
+
+.brand-logo {
+    max-width: 250px; /* Logo max width is set to 100 px */
+}
+
+.brand-title {
+    font-size: 70px; /* Sets the title to a fond size of 70px */
+    font-weight: bold; /* Bolds the title */
+    color: white; /* Makes it white */
+}
+
+/* Coffee Charts */
+#charts {
+    max-width: 900px; /* Sets max width */
+    margin: 24px; /* Give space around chart */
+    padding: 12px; /* Give space inside chart */
+}
+
+.chart canvas {
+    width: 500px !important; /* Makes all charts 450px wide */
+    height: 400px !important; /* Makes all charts 350px height */
+}
+
+.chart-row {
+    display: flex; /* Place charts side by side */
+    justify-content: space-around; /* Spread charts evenly across row */
+    gap: 5px; /* Gives space between charts */
+}
+
+.chart {
+    text-align: center; /* Center chart titles above graphs */
+}
+
+.chart.alone {
+    max-width: 500px; /* Limit width of single charts */
+    margin-bottom: 24px; /* Gives space below single charts */
+}
+
+/* Sets size for Calorie chart */
+#CalorieChart {
+    width: 700px;
+    height: 450px;
+}
+
+/* Sets size for drinks Pie Chart */
+#drinksPieChart {
+    width: 500px;
+    height: 500px;
+}
