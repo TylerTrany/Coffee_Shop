@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Title shown on page -->
+  <title>Order History - Tyler's Coffee Shop</title>
+
+  <!-- Link to home page -->
+  <link rel="stylesheet" href="coffee.css" />
+</head>
+<body>
+
+  <!-- Header with logo and page title -->
+  <header class="coffee-header">
+    <div class="brand">
+
+      <!-- Coffee logo -->
+      <img src="logo.png">
+
+      <!-- Main page title -->
+      <h1 class="brand-title">Order History</h1>
+    </div>
+
+    <!-- Navigation to go back to shop -->
+    <nav class="coffee-nav">
+      <ul>
+        <li><a href="coffee.html">Back to Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Table for order history and chart -->
+    <section id="history">
+      <h2>Past Orders</h2>
+
+      <!-- Table to display order history -->
+      <table id="historyTable" border="1" cellpadding="8">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Total $</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Button to clear all saved orders -->
+      <button id="clearHistoryBtn" type="button">Clear History</button>
+      <div class="chart alone">
+        <h3>All-Time Drinks Ordered</h3>
+        <canvas id="historyChart"></canvas>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Load Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="history.js"></script>
+</body>
+</html>
