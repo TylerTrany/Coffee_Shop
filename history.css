@@ -1,0 +1,20 @@
+/* Order History Table */
+#historyTable {
+    width: 100%;
+    border-collapse: collapse; /* Removes double borders */
+    margin-top: 16px;
+}
+
+#historyTable th,
+#historyTable td {
+    border: 1px solid #6d4f3a; /* Same brown as header */
+    padding: 8px; /* Like cellpadding="8" */
+    text-align: center;
+}
+
+#historyTable th {
+    background-color: #6d4f3a; /* Brown background for headers */
+    color: white; /* White text */
+    font-weight: bold;
+}
+
