@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Website setup -->
+  <meta charset="utf-8" />
+  <title>Tyler's Coffee Shop</title>
+  <meta name="description" content="This is a Coffee Shop Website with Graphs">
+  <meta name="keywords" content="Flavor, Calories">
+  <meta name="author" content="Tyler Tran">
+  <link rel="stylesheet" href="coffee.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+  <!-- Header with logo and title -->
+<header class="coffee-header">
+  <div class="brand">
+
+    <!-- Logo image -->
+    <img src="logo.png" alt="Tyler's Coffee Shop Logo" class="brand-logo">
+
+    <!-- Title text -->
+    <h1 class="brand-title">Tyler's Coffee Shop</h1>
+  </div>
+</header>
+
+<!-- Menu Section -->
+<main>
+  <section id="menu">
+    <h2>Our Menu</h2>
+
+    <!-- Table with information about drinks -->
+    <table border="1" cellpadding="8">
+
+      <!-- Title of each column -->
+      <thead>
+        <tr>
+          <th>Beverage</th>
+          <th>Flavor</th>
+          <th>Calories</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Each row has one drink and its information -->
+        <tr>
+          <td>Espresso</td>
+          <td>Bold</td>
+          <td>5</td>
+          <td>$2.50</td>
+        </tr>
+        <tr>
+          <td>Latte</td>
+          <td>Vanilla</td>
+          <td>150</td>
+          <td>$3.75</td>
+        </tr>
+        <tr>
+          <td>Cappuccino</td>
+          <td>Cinnamon</td>
+          <td>120</td>
+          <td>$3.50</td>
+        </tr>
+        <tr>
+          <td>Iced Coffee</td>
+          <td>Mocha</td>
+          <td>180</td>
+          <td>$4.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Chart row -->
+  <section id="charts">
+    <div class="chart-row">
+      <div class="chart">
+      
+      <!-- Chart for Calories by Drink -->
+      <h3>Calories by Drink</h3>
+      <canvas id="calorieChart"></canvas>
+    </div>
+    <div class="chart">
+
+      <!-- Chart for Calories vs Price -->
+      <h2>Calories vs. Price</h2>
+      <canvas id="calPriceChart"></canvas>
+    </div>
+  </section>
+
+    <!-- Order form -->
+    <section id="order">
+      <h2>Place Your Order</h2>
+
+      <!-- User chooses what type of coffee they want-->
+      <div class="add-controls">
+        <label for="drink">Choose a drink:</label>
+        <select id="drink">
+          <option value="">-- Select a drink --</option>
+          <option value="Espresso">Espresso $2.50</option>
+          <option value="Latte">Latte $3.75</option>
+          <option value="Cappuccino">Cappuccino $3.50</option>
+          <option value="Iced Coffee">Iced Coffee $4.00</option>
+        </select>
+
+        <!-- User chooses how many they want -->
+        <label for="qty">Qty:</label>
+        <input type="number" id="qty" min="0" value="1" />
+        <button id="addCoffeeBtn" type="button">Add Item</button>
+      </div>
+
+      <!-- Enter name to help confirm order -->
+      <form id="orderForm">
+        <label for="customer">Your Name:</label>
+        <input type="text" id="customer" name="customer" required>
+
+        <!-- The user can make custom request in case they want more sugar or cream -->
+        <label for="custom">Custom request (optional):</label>
+        <textarea id="custom" name="custom" rows="3"></textarea>
+
+        <!-- The user can choose whether or not they want a reciept emailed to them -->
+      <div>
+        <label for="email">Email for Receipt (optional):</label>
+        <input type="email" name="email" placeholder="Your Email">
+      </div>
+      
+        <!-- Cart information -->
+        <div class="cart">
+          <h3>Your Cart</h3>
+          <table id="cartTable">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Unit $</th>
+                <th>Qty</th>
+                <th>Subtotal $</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <!-- Total cost of drinks -->
+          <div class="total">
+            <strong>Total: $<span id="total">0.00</span></strong>
+          </div>
+        </div>
+
+        <!-- User can press buttons to help them buy -->
+        <div class="actions">
+          <button type="submit">Submit Order</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <!-- Confirm order -->
+      <div id="orderResult"></div>
+    </section>
+
+    <!-- Extra charts -->
+    <div class="chart alone">
+      <canvas id="orderedCaloriesChart"></canvas>
+    </div>
+    
+    <div class="chart alone">
+      <canvas id="drinksPieChart"></canvas>
+    </div>
+
+    <!-- Link to about page -->
+    <section id="about-link">
+      <p>
+        Want to know more about us?
+        <!-- Link to about.html -->
+        <a href="about.html">Click here to read About Us</a>
+      </p>
+    </section>  
+
+    <section id="history-link">
+      <p>
+        Want to know the recent orders?
+        <a href="history.html">Click here to view Our Order History</a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Scripts (libraries) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="coffee.js"></script>
+</body>
+</html>
